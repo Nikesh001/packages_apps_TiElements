@@ -179,4 +179,16 @@
             android:title="@string/hardware_keys_double_tap_title" >
         </com.titanium.tielements.preferences.ActionPreference>
     </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="volume_rocker"
+        android:title="@string/volume_title">
+
+        <Preference
+            android:key="volume_key"
+            android:fragment="com.titanium.tielements.fragments.Volume"
+            android:title="@string/volume_title"
+            android:summary="@string/volume_summary" />
+    </PreferenceCategory>
+
 </PreferenceScreen>
