@@ -222,4 +222,11 @@
     <string name="swap_volume_buttons_title">Swap keys</string>
     <string name="swap_volume_buttons_summary">Swap volume buttons when the screen is rotated</string>
 
+    <!-- Screenshot -->
+    <string name="screenshot_type_title">Screenshot type</string>
+    <string name="screenshot_type_fullscreen">Take fullscreen screenshots</string>
+    <string name="screenshot_type_partial">Drag selection on the area you want to take as a screenshot</string>
+    <string name="screenshot_options_category">Screenshot options</string>
+    <string name="screenshot_options_summary">Customize screenshot attributes like time, delay,type etc</string>
+
 </resources>
