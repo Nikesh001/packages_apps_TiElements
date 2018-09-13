@@ -52,4 +52,15 @@
             android:title="@string/wallpaper_intra_close_title" />
     </PreferenceCategory>
 
+    <PreferenceCategory
+            android:title="@string/toast_title">
+
+        <com.titanium.support.preferences.SystemSettingListPreference
+            android:key="toast_animation"
+            android:title="@string/toast_animation_title"
+            android:entries="@array/toast_animation_entries"
+            android:entryValues="@array/toast_animation_values"
+            android:persistent="false" />
+     </PreferenceCategory>
+
 </PreferenceScreen>
