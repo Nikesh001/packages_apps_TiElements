@@ -4,4 +4,52 @@
     android:title="@string/menu_animations"
     xmlns:settings="http://schemas.android.com/apk/res-auto">
 
+    <PreferenceCategory
+            android:title="@string/system_title">
+
+        <com.titanium.support.preferences.SystemSettingListPreference
+            android:key="activity_open"
+            android:title="@string/activity_open_title" />
+
+        <com.titanium.support.preferences.SystemSettingListPreference
+            android:key="activity_close"
+            android:title="@string/activity_close_title" />
+
+        <com.titanium.support.preferences.SystemSettingListPreference
+            android:key="task_open"
+            android:title="@string/task_open_title" />
+
+        <com.titanium.support.preferences.SystemSettingListPreference
+            android:key="task_open_behind"
+            android:title="@string/task_open_behind_title" />
+
+        <com.titanium.support.preferences.SystemSettingListPreference
+            android:key="task_close"
+            android:title="@string/task_close_title" />
+
+        <com.titanium.support.preferences.SystemSettingListPreference
+            android:key="task_move_to_front"
+            android:title="@string/task_move_to_front_title" />
+
+        <com.titanium.support.preferences.SystemSettingListPreference
+            android:key="task_move_to_back"
+            android:title="@string/task_move_to_back_title" />
+
+        <com.titanium.support.preferences.SystemSettingListPreference
+            android:key="wallpaper_open"
+            android:title="@string/wallpaper_open_title" />
+
+        <com.titanium.support.preferences.SystemSettingListPreference
+            android:key="wallpaper_close"
+            android:title="@string/wallpaper_close_title" />
+
+        <com.titanium.support.preferences.SystemSettingListPreference
+            android:key="wallpaper_intra_open"
+            android:title="@string/wallpaper_intra_open_title" />
+
+        <com.titanium.support.preferences.SystemSettingListPreference
+            android:key="wallpaper_intra_close"
+            android:title="@string/wallpaper_intra_close_title" />
+    </PreferenceCategory>
+
 </PreferenceScreen>
