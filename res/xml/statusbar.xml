@@ -9,6 +9,12 @@
          android:summary="@string/clock_style_category_summary"
          android:fragment="com.titanium.tielements.fragments.ClockSettings" />
 
+    <Preference
+         android:key="carrierlabel_settings"
+         android:title="@string/carrier_label_category_title"
+         android:summary="@string/carrier_label_category_summary"
+         android:fragment="com.titanium.tielements.fragments.CarrierLabelSettings" />
+
     <PreferenceCategory
         android:key="statusbar_ntraffic"
         android:title="@string/statusbar_ntraffic">
