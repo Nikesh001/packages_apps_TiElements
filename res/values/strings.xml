@@ -77,5 +77,17 @@
     <string name="powermenu_ls_screenshot_summary">Show the screenshot option on the lockscreen</string>
     <string name="powermenu_ls_torch_summary">Show the torch option on the lockscreen</string>
 
+    <!-- Statusbar net monitor -->
+    <string name="statusbar_ntraffic">Network</string>
+    <string name="traffic_title">Network Traffic</string>
+    <string name="traffic_summary">Network traffic indicators</string>
+    <string name="network_traffic_state_title">Network Traffic</string>
+    <string name="network_traffic_state_summary">Show net activity in statusbar or expanded statusbar</string>
+    <string name="network_traffic_type">Select net activity type</string>
+    <string name="show_network_traffic_up">Upload</string>
+    <string name="show_network_traffic_down">Download</string>
+    <string name="show_network_traffic_all">Upload and Download</string>
+    <string name="network_traffic_autohide_threshold_title">Net activity autohide threshold (KB/s)</string>
+
 </resources>
 
