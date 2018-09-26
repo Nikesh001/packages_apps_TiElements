@@ -7,6 +7,15 @@
     <PreferenceCategory
             android:title="@string/system_title">
 
+         <com.titanium.support.preferences.CustomSeekBarPreference
+             android:key="animation_duration"
+             android:max="1500"
+             android:persistent="false"
+             android:title="@string/animation_duration_title"
+             settings:min="0"
+             settings:units="ms"
+             settings:interval="50"/>
+
         <com.titanium.support.preferences.SystemSettingListPreference
             android:key="activity_open"
             android:title="@string/activity_open_title" />
