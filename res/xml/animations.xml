@@ -16,6 +16,12 @@
              settings:units="ms"
              settings:interval="50"/>
 
+        <com.titanium.support.preferences.GlobalSettingSwitchPreference
+            android:key="disable_transition_animations"
+            android:title="@string/disable_transition_animations_title"
+            android:summary="@string/disable_transition_animations_summary"
+            android:defaultValue="false" />
+
         <com.titanium.support.preferences.SystemSettingListPreference
             android:key="activity_open"
             android:title="@string/activity_open_title" />
