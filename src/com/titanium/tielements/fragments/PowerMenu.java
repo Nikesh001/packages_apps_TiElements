@@ -41,7 +41,7 @@ import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PowerMenu extends SettingsPreferenceFragment     
+public class PowerMenu extends SettingsPreferenceFragment
                 implements Preference.OnPreferenceChangeListener {
 
     public static final String TAG = "PowerMenu";
@@ -52,6 +52,7 @@ public class PowerMenu extends SettingsPreferenceFragment
     private static final String KEY_POWERMENU_LS_ADVANCED_REBOOT = "powermenu_ls_advanced_reboot";
     private static final String KEY_POWERMENU_LS_SCREENSHOT = "powermenu_ls_screenshot";
     private static final String KEY_POWERMENU_LS_TORCH = "powermenu_ls_torch";
+    private static final String POWER_MENU_ANIMATIONS = "power_menu_animations";
 
     private SwitchPreference mPowermenuTorch;
     private SwitchPreference mPowerMenuLockscreen;
@@ -59,6 +60,7 @@ public class PowerMenu extends SettingsPreferenceFragment
     private SwitchPreference mPowerMenuAdvancedReboot;
     private SwitchPreference mPowerMenuScreenshot;
     private SwitchPreference mPowerMenuLSTorch;
+    private ListPreference mPowerMenuAnimations;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -78,6 +80,12 @@ public class PowerMenu extends SettingsPreferenceFragment
         mPowermenuTorch.setChecked((Settings.System.getInt(resolver,
                 Settings.System.POWERMENU_TORCH, 0) == 1));
         }
+
+        mPowerMenuAnimations = (ListPreference) findPreference(POWER_MENU_ANIMATIONS);
+        mPowerMenuAnimations.setValue(String.valueOf(Settings.System.getInt(
+                getContentResolver(), Settings.System.POWER_MENU_ANIMATIONS, 0)));
+        mPowerMenuAnimations.setSummary(mPowerMenuAnimations.getEntry());
+        mPowerMenuAnimations.setOnPreferenceChangeListener(this);
 
         mPowerMenuLockscreen = (SwitchPreference) findPreference(KEY_POWERMENU_LOCKSCREEN);
         mPowerMenuLockscreen.setChecked((Settings.System.getInt(getContentResolver(),
@@ -106,7 +114,7 @@ public class PowerMenu extends SettingsPreferenceFragment
 
         updateLockscreen();
     }
-	
+
     @Override
     public boolean onPreferenceChange(Preference preference, Object objValue) {
         if (preference == mPowermenuTorch) {
@@ -139,6 +147,12 @@ public class PowerMenu extends SettingsPreferenceFragment
             boolean value = (Boolean) objValue;
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.POWERMENU_LS_TORCH, value ? 1 : 0);
+            return true;
+        } else if (preference == mPowerMenuAnimations) {
+            Settings.System.putInt(getContentResolver(), Settings.System.POWER_MENU_ANIMATIONS,
+                    Integer.valueOf((String) objValue));
+            mPowerMenuAnimations.setValue(String.valueOf(objValue));
+            mPowerMenuAnimations.setSummary(mPowerMenuAnimations.getEntry());
             return true;
         }
         return false;

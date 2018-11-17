@@ -185,4 +185,13 @@
     <string name="statusbar_items_title">Statusbar icons</string>
     <string name="statusbar_items_summary">Toggle the visibility of icons in statusbar</string>
 
+    <!-- Power menu Animations  -->
+    <string name="powermenu_animations">Animation</string>
+    <string name="power_menu_animation_title">Power menu animation</string>
+    <string name="power_menu_animation_summary">Change the enter/exit animation of the power menu</string>
+    <string name="power_menu_animation_dialog_title">Select power menu animation</string>
+    <string name="power_menu_animation_aosp">AOSP (default)</string>
+    <string name="power_menu_animation_bottom">Bottom</string>
+    <string name="power_menu_animation_top">Top</string>
+
 </resources>
