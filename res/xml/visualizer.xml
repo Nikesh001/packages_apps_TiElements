@@ -19,7 +19,13 @@
 	android:title="@string/lockscreen_visualizer_enable">
 
     <com.titanium.support.preferences.SecureSettingSwitchPreference
-       android:key="lockscreen_visualizer_autocolor"
+        android:key="ambient_visualizer"
+        android:title="@string/ambient_visualizer_title"
+        android:summary="@string/ambient_visualizer_summary"
+        android:defaultValue="false" />
+
+    <com.titanium.support.preferences.SecureSettingSwitchPreference
+        android:key="lockscreen_visualizer_autocolor"
         android:title="@string/lockscreen_autocolor_title"
         android:summary="@string/lockscreen_autocolor_summary"
         android:defaultValue="true" />
