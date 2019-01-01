@@ -538,4 +538,8 @@
     <string name="screen_off_animation_scale">Scale</string>
     <string name="screen_off_animation_title">Screen off animation</string>
 
+    <!-- Ambient visualizer -->
+    <string name="ambient_visualizer_title">Show on Ambient Display</string>
+    <string name="ambient_visualizer_summary">Display the visualizer bars on ambient display</string>
+
 </resources>
