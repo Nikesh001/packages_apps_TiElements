@@ -514,5 +514,10 @@
     <!-- AOSP Gestures -->
     <string name="aosp_gesture_preference">AOSP Gestures</string>
     <string name="aosp_gesture_summary">Gestures Settings of AOSP</string>
+    
+    <!-- Double Tap gestures -->
+    <string name="gestures_title">Gestures</string>
+    <string name="double_tap_sleep_lockscreen_title">Double tap to sleep</string>
+    <string name="double_tap_sleep_lockscreen_summary">Double tap anywhere on the lockscreen to put phone to sleep</string>
 
 </resources>
