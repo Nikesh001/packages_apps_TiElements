@@ -46,5 +46,13 @@
     <string name="loading">Loading\u2026</string>
     <string name="reset">Reset</string>
     <string name="app_name">TiElements</string>
+
+    <!-- Lockscreen Categories -->
+    <string name="ls_disable_elements">Elements</string>
+
+    <!-- Lockscreen battery info indicator -->
+    <string name="lockscreen_battery_info_title">Charging info</string>
+    <string name="lockscreen_battery_info_summary">Display charger max current, voltage, wattage and battery temperature while charging</string>
+
 </resources>
 
