@@ -39,4 +39,9 @@
         android:title="@string/powermenu_screenshot_title"
         android:defaultValue="false" />
 
+    <com.titanium.support.preferences.SystemSettingSwitchPreference
+        android:key="powermenu_torch"
+        android:title="@string/powermenu_torch"
+        android:persistent="false" />
+
 </PreferenceScreen>
