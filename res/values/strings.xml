@@ -66,5 +66,11 @@
     <string name="lockscreen_battery_info_title">Charging info</string>
     <string name="lockscreen_battery_info_summary">Display charger max current, voltage, wattage and battery temperature while charging</string>
 
+    <!-- Incall vibrate options -->
+    <string name="incall_vibration_category">In-call Vibration</string>
+    <string name="incall_vibrate_connect_title">Vibrate on Connect</string>
+    <string name="incall_vibrate_call_wait_title">Vibrate on Call Waiting</string>
+    <string name="incall_vibrate_disconnect_title">Vibrate on Disconnect</string>
+
 </resources>
 
