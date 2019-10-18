@@ -16,6 +16,18 @@
          android:fragment="com.titanium.tielements.fragments.CarrierLabelSettings" />
 
     <PreferenceCategory
+        android:key="statusbar_gestures"
+        android:title="@string/gestures_title">
+
+        <com.titanium.support.preferences.SystemSettingSwitchPreference
+            android:key="double_tap_sleep_gesture"
+            android:title="@string/double_tap_sleep_gesture_title"
+            android:summary="@string/double_tap_sleep_gesture_summary"
+            android:defaultValue="false" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:key="statusbar_ntraffic"
         android:title="@string/statusbar_ntraffic">
 
