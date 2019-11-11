@@ -51,7 +51,7 @@ import java.util.List;
 
 public class Animations extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
-    
+
     private static final String TAG = "Animations";
     private static final String ACTIVITY_OPEN = "activity_open";
     private static final String ACTIVITY_CLOSE = "activity_close";
@@ -71,6 +71,7 @@ public class Animations extends SettingsPreferenceFragment implements
     private static final String SCROLLINGCACHE_PERSIST_PROP = "persist.sys.scrollingcache";
     private static final String SCROLLINGCACHE_DEFAULT = "2";
     private static final String ANIMATION_DURATION = "animation_duration";
+    private static final String KEY_SCREEN_OFF_ANIMATION = "screen_off_animation";
 
     private ListPreference mToastAnimation;
     private ListPreference mScrollingCachePref;
@@ -88,6 +89,7 @@ public class Animations extends SettingsPreferenceFragment implements
     private ListPreference mWallpaperIntraOpen;
     private ListPreference mWallpaperIntraClose;
     private CustomSeekBarPreference mAnimationDuration;
+    private ListPreference mScreenOffAnimation;
 
     private int[] mAnimations;
     private String[] mAnimationsStrings;
@@ -139,6 +141,13 @@ public class Animations extends SettingsPreferenceFragment implements
         for (int i = 0; i < animqty; i++) {
             mAnimationsStrings[i] = AwesomeAnimationHelper.getProperName(mContext, mAnimations[i]);
             mAnimationsNum[i] = String.valueOf(mAnimations[i]);
+
+        mScreenOffAnimation = (ListPreference) findPreference(KEY_SCREEN_OFF_ANIMATION);
+        int screenOffAnimation = Settings.System.getInt(getContentResolver(),
+                Settings.System.SCREEN_OFF_ANIMATION, 0);
+        mScreenOffAnimation.setValue(Integer.toString(screenOffAnimation));
+        mScreenOffAnimation.setSummary(mScreenOffAnimation.getEntry());
+        mScreenOffAnimation.setOnPreferenceChangeListener(this);
         }
 
         mAnimationDuration = (CustomSeekBarPreference) findPreference(ANIMATION_DURATION);
@@ -305,6 +314,12 @@ public class Animations extends SettingsPreferenceFragment implements
         } else if (preference == mAnimationDuration) {
             int val = (Integer) newValue;
             Settings.Global.putInt(getContentResolver(), Settings.Global.ANIMATION_CONTROLS_DURATION, val);
+            return true;
+        } else if (preference == mScreenOffAnimation) {
+            int value = Integer.valueOf((String) newValue);
+            int index = mScreenOffAnimation.findIndexOfValue((String) newValue);
+            mScreenOffAnimation.setSummary(mScreenOffAnimation.getEntries()[index]);
+            Settings.System.putInt(getContentResolver(), Settings.System.SCREEN_OFF_ANIMATION, value);
             return true;
         }
         preference.setSummary(getProperSummary(preference));
