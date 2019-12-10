@@ -90,6 +90,7 @@ public class ElementsFragment extends SettingsPreferenceFragment implements View
 
     private void loadFragment(String tag, boolean addToStack, Bundle bundle, Fragment setFragment) {
         mFragmentTransaction = mFragmentManager.beginTransaction();
+        mFragmentTransaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_from_left);
         mFragment = setFragment;
 
         if (addToStack) {
