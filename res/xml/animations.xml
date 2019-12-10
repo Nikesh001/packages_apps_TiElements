@@ -1,6 +1,7 @@
-<PreferenceScreen 
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:title="@string/menu_status_bar"
+    android:title="@string/menu_animations"
     xmlns:settings="http://schemas.android.com/apk/res-auto">
 
 </PreferenceScreen>

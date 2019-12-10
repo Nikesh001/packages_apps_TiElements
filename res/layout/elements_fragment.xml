@@ -30,6 +30,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:fillViewport="true"
+        android:layout_below="@+id/app_banner"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -119,16 +120,16 @@
                     </com.titanium.tielements.views.MenuViews>
 
                     <com.titanium.tielements.views.MenuViews
-                        android:id="@+id/recent_menu"
+                        android:id="@+id/notifications_menu"
                         android:layout_width="match_parent"
                         android:layout_height="120dp"
                         android:layout_marginRight="10dp"
                         android:layout_marginLeft="10dp"
                         android:layout_weight="1"
-                        android:background="@drawable/bg_recent"
+                        android:background="@drawable/bg_notifications"
                         android:clickable="true"
-                        app:icon="@drawable/ic_recent"
-                        app:title="@string/menu_recent">
+                        app:icon="@drawable/ic_notification"
+                        app:title="@string/menu_notifications">
                     </com.titanium.tielements.views.MenuViews>
 
                     <com.titanium.tielements.views.MenuViews
@@ -142,6 +143,58 @@
                         android:clickable="true"
                         app:icon="@drawable/ic_misc"
                         app:title="@string/menu_system">
+                    </com.titanium.tielements.views.MenuViews>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="24dp"
+                    android:paddingRight="16dp"
+                    android:paddingLeft="16dp"
+                    android:paddingBottom="24dp"
+                    android:weightSum="3"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal">
+
+                    <com.titanium.tielements.views.MenuViews
+                        android:id="@+id/animations_menu"
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_animations"
+                        android:clickable="true"
+                        app:icon="@drawable/ic_gestures"
+                        app:title="@string/menu_animations">
+                    </com.titanium.tielements.views.MenuViews>
+
+                    <com.titanium.tielements.views.MenuViews
+                        android:id="@+id/buttons_menu"
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_buttons"
+                        android:clickable="true"
+                        app:icon="@drawable/ic_power"
+                        app:title="@string/menu_buttons">
+                    </com.titanium.tielements.views.MenuViews>
+
+                    <com.titanium.tielements.views.MenuViews
+                        android:id="@+id/about_menu"
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_about"
+                        android:clickable="true"
+                        app:icon="@drawable/ic_about"
+                        app:title="@string/menu_about">
                     </com.titanium.tielements.views.MenuViews>
 
                 </LinearLayout>

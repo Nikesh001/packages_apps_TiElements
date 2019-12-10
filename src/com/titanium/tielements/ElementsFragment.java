@@ -29,10 +29,13 @@ import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.internal.logging.nano.MetricsProto;
 
+import com.titanium.tielements.fragments.About;
+import com.titanium.tielements.fragments.Animations;
+import com.titanium.tielements.fragments.Buttons;
 import com.titanium.tielements.fragments.Lockscreen;
 import com.titanium.tielements.fragments.Navigation;
+import com.titanium.tielements.fragments.Notifications;
 import com.titanium.tielements.fragments.QuickSettings;
-import com.titanium.tielements.fragments.Recents;
 import com.titanium.tielements.fragments.Statusbar;
 import com.titanium.tielements.fragments.System;
 import com.titanium.tielements.views.MenuViews;
@@ -41,7 +44,7 @@ public class ElementsFragment extends SettingsPreferenceFragment implements View
 
     private static final String TAG = "TiElements";
 
-    private MenuViews statusbar,navbar,qs,recents,lockscreen,system;
+    private MenuViews statusbar, navbar, qs, system, lockscreen, notications, buttons, about, animations;
     private FragmentManager mFragmentManager;
     private FragmentTransaction mFragmentTransaction;
     private Fragment mFragment;
@@ -72,9 +75,12 @@ public class ElementsFragment extends SettingsPreferenceFragment implements View
         statusbar = (MenuViews) view.findViewById(R.id.statusbar_menu);
         navbar = (MenuViews) view.findViewById(R.id.navbar_menu);
         qs = (MenuViews) view.findViewById(R.id.quick_settings_menu);
-        recents = (MenuViews) view.findViewById(R.id.recent_menu);
+        notications = (MenuViews) view.findViewById(R.id.notifications_menu);
         lockscreen = (MenuViews) view.findViewById(R.id.lockscreen_menu);
         system = (MenuViews) view.findViewById(R.id.system_menu);
+        animations = (MenuViews) view.findViewById(R.id.animations_menu);
+        buttons = (MenuViews) view.findViewById(R.id.buttons_menu);
+        about = (MenuViews) view.findViewById(R.id.about_menu);
 
         initClick();
     }
@@ -83,9 +89,12 @@ public class ElementsFragment extends SettingsPreferenceFragment implements View
         statusbar.setOnClickListener(this);
         navbar.setOnClickListener(this);
         qs.setOnClickListener(this);
-        recents.setOnClickListener(this);
+        notications.setOnClickListener(this);
         lockscreen.setOnClickListener(this);
         system.setOnClickListener(this);
+        animations.setOnClickListener(this);
+        buttons.setOnClickListener(this);
+        about.setOnClickListener(this);
     }
 
     private void loadFragment(String tag, boolean addToStack, Bundle bundle, Fragment setFragment) {
@@ -109,7 +118,7 @@ public class ElementsFragment extends SettingsPreferenceFragment implements View
 
     @Override
     public void onClick(View view) {
-        switch (view.getId()){
+        switch (view.getId()) {
             case  R.id.statusbar_menu:
                 loadFragment(Constants.STATUS_BAR_MENU_FRAGMENT,true,null,new Statusbar());
                 break;
@@ -119,14 +128,23 @@ public class ElementsFragment extends SettingsPreferenceFragment implements View
             case  R.id.quick_settings_menu:
                 loadFragment(Constants.QUICK_SETTINGS_MENU_FRAGMENT,true,null,new QuickSettings());
                 break;
-            case  R.id.recent_menu:
-                loadFragment(Constants.RECENT_MENU_FRAGMENT,true,null,new Recents());
+            case  R.id.notifications_menu:
+                loadFragment(Constants.RECENT_MENU_FRAGMENT,true,null,new Notifications());
                 break;
             case  R.id.lockscreen_menu:
                 loadFragment(Constants.LOCK_SCREEN_MENU_FRAGMENT,true,null,new Lockscreen());
                 break;
             case  R.id.system_menu:
                 loadFragment(Constants.SYSTEM_MENU_FRAGMENT,true,null,new System());
+                break;
+            case  R.id.animations_menu:
+                loadFragment(Constants.SYSTEM_MENU_FRAGMENT,true,null,new Animations());
+                break;
+            case  R.id.buttons_menu:
+                loadFragment(Constants.SYSTEM_MENU_FRAGMENT,true,null,new Buttons());
+                break;
+            case  R.id.about_menu:
+                loadFragment(Constants.SYSTEM_MENU_FRAGMENT,true,null,new About());
                 break;
 
         }
