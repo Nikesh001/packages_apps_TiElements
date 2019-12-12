@@ -37,14 +37,14 @@ import com.titanium.tielements.fragments.Navigation;
 import com.titanium.tielements.fragments.Notifications;
 import com.titanium.tielements.fragments.QuickSettings;
 import com.titanium.tielements.fragments.Statusbar;
-import com.titanium.tielements.fragments.System;
+import com.titanium.tielements.fragments.Misc;
 import com.titanium.tielements.views.MenuViews;
 
 public class ElementsFragment extends SettingsPreferenceFragment implements View.OnClickListener, Preference.OnPreferenceChangeListener {
 
     private static final String TAG = "TiElements";
 
-    private MenuViews statusbar, navbar, qs, system, lockscreen, notications, buttons, about, animations;
+    private MenuViews statusbar, navbar, qs, misc, lockscreen, notications, buttons, about, animations;
     private FragmentManager mFragmentManager;
     private FragmentTransaction mFragmentTransaction;
     private Fragment mFragment;
@@ -77,7 +77,7 @@ public class ElementsFragment extends SettingsPreferenceFragment implements View
         qs = (MenuViews) view.findViewById(R.id.quick_settings_menu);
         notications = (MenuViews) view.findViewById(R.id.notifications_menu);
         lockscreen = (MenuViews) view.findViewById(R.id.lockscreen_menu);
-        system = (MenuViews) view.findViewById(R.id.system_menu);
+        misc = (MenuViews) view.findViewById(R.id.misc_menu);
         animations = (MenuViews) view.findViewById(R.id.animations_menu);
         buttons = (MenuViews) view.findViewById(R.id.buttons_menu);
         about = (MenuViews) view.findViewById(R.id.about_menu);
@@ -91,7 +91,7 @@ public class ElementsFragment extends SettingsPreferenceFragment implements View
         qs.setOnClickListener(this);
         notications.setOnClickListener(this);
         lockscreen.setOnClickListener(this);
-        system.setOnClickListener(this);
+        misc.setOnClickListener(this);
         animations.setOnClickListener(this);
         buttons.setOnClickListener(this);
         about.setOnClickListener(this);
@@ -134,8 +134,8 @@ public class ElementsFragment extends SettingsPreferenceFragment implements View
             case  R.id.lockscreen_menu:
                 loadFragment(Constants.LOCK_SCREEN_MENU_FRAGMENT,true,null,new Lockscreen());
                 break;
-            case  R.id.system_menu:
-                loadFragment(Constants.SYSTEM_MENU_FRAGMENT,true,null,new System());
+            case  R.id.misc_menu:
+                loadFragment(Constants.SYSTEM_MENU_FRAGMENT,true,null,new Misc());
                 break;
             case  R.id.animations_menu:
                 loadFragment(Constants.SYSTEM_MENU_FRAGMENT,true,null,new Animations());
