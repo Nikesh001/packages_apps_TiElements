@@ -29,7 +29,7 @@
     <string name="menu_buttons">Buttons</string>
     <string name="menu_about">About</string>
     <string name="menu_quick_settings">Quick Settings</string>
-    <string name="menu_system">System</string>
+    <string name="menu_misc">Misc</string>
     <string name="build_tweaks_summary_title">Add Elements in your device</string>
 
     <string name="go_back">Go Back</string>
