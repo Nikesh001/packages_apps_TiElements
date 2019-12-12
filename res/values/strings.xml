@@ -31,7 +31,9 @@
     <string name="menu_quick_settings">Quick Settings</string>
     <string name="menu_misc">Misc</string>
     <string name="build_tweaks_summary_title">Add Elements in your device</string>
-
+    <string name="who_we_are_desc">
+        TitaniumOS is a Custom ROM based on Google Android Open Source Project.This ROM developed with a major focus on system stability and useful features. All this without compromising on the pure Android experience.
+    </string>
     <string name="go_back">Go Back</string>
 
     <string name="tielements_title">TiElements</string>

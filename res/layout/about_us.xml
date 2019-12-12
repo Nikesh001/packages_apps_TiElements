@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_5"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:scrollbars="none"
+        android:scrollingCache="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/spacing_large">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="2dp"
+                app:cardElevation="2dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white_background"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/spacing_xlarge">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_large"
+                        android:gravity="center"
+                        android:text="Our Team"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/grey_90"
+                        app:fontFamily="sans-serif-medium" />
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="4dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:tint="@color/red_700"
+                        android:src="@drawable/swipe_up_handle" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/spacing_large"
+                        android:layout_marginRight="@dimen/spacing_large"
+                        android:layout_marginTop="@dimen/spacing_large"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <com.mikhaellopez.circularimageview.CircularImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/saikat"
+                                app:civ_border="true"
+                                app:civ_border_color="@color/grey_10"
+                                app:civ_border_width="2dp"
+                                app:civ_shadow="true"
+                                app:civ_shadow_radius="0" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/spacing_medium"
+                                android:text="Saikat"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+                                android:textColor="@color/grey_90"
+                                app:fontFamily="sans-serif-medium" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Founder/Lead Dev"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+                                android:textColor="@color/grey_60"
+                                app:fontFamily="sans-serif-light" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <com.mikhaellopez.circularimageview.CircularImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/nikesh"
+                                app:civ_border="true"
+                                app:civ_border_color="@color/grey_10"
+                                app:civ_border_width="2dp"
+                                app:civ_shadow="true"
+                                app:civ_shadow_radius="0" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/spacing_medium"
+                                android:text="Nikesh"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+                                android:textColor="@color/grey_90"
+                                app:fontFamily="sans-serif-medium" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Core Dev"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+                                android:textColor="@color/grey_60"
+                                app:fontFamily="sans-serif-light" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <com.mikhaellopez.circularimageview.CircularImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/abhiraj"
+                                app:civ_border="true"
+                                app:civ_border_color="@color/grey_10"
+                                app:civ_border_width="2dp"
+                                app:civ_shadow="true"
+                                app:civ_shadow_radius="0" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/spacing_medium"
+                                android:text="Abhiraj"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+                                android:textColor="@color/grey_90"
+                                app:fontFamily="sans-serif-medium" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Core Dev"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+                                android:textColor="@color/grey_60"
+                                app:fontFamily="sans-serif-light" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/spacing_large"
+                        android:layout_marginRight="@dimen/spacing_large"
+                        android:layout_marginTop="@dimen/spacing_mlarge"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <com.mikhaellopez.circularimageview.CircularImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/sonal"
+                                app:civ_border="true"
+                                app:civ_border_color="@color/grey_10"
+                                app:civ_border_width="2dp"
+                                app:civ_shadow="true"
+                                app:civ_shadow_radius="0" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/spacing_medium"
+                                android:text="Sonal"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+                                android:textColor="@color/grey_90"
+                                app:fontFamily="sans-serif-medium" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Core Dev"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+                                android:textColor="@color/grey_60"
+                                app:fontFamily="sans-serif-light" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <com.mikhaellopez.circularimageview.CircularImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/roger"
+                                app:civ_border="true"
+                                app:civ_border_color="@color/grey_10"
+                                app:civ_border_width="2dp"
+                                app:civ_shadow="true"
+                                app:civ_shadow_radius="0" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/spacing_medium"
+                                android:text="Roger"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+                                android:textColor="@color/grey_90"
+                                app:fontFamily="sans-serif-medium" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="UI/UX Developer"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+                                android:textColor="@color/grey_60"
+                                app:fontFamily="sans-serif-light" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <com.mikhaellopez.circularimageview.CircularImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/vivek"
+                                app:civ_border="true"
+                                app:civ_border_color="@color/grey_10"
+                                app:civ_border_width="2dp"
+                                app:civ_shadow="true"
+                                app:civ_shadow_radius="0" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/spacing_medium"
+                                android:text="Vivek"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+                                android:textColor="@color/grey_90"
+                                app:fontFamily="sans-serif-medium" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="UI/UX Developer"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+                                android:textColor="@color/grey_60"
+                                app:fontFamily="sans-serif-light" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_middle" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white_background"
+                app:cardCornerRadius="2dp"
+                app:cardElevation="2dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white_background"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/spacing_large"
+                    android:paddingLeft="@dimen/spacing_mlarge"
+                    android:paddingRight="@dimen/spacing_mlarge"
+                    android:paddingTop="@dimen/spacing_large">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Who We Are"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/grey_90"
+                        app:fontFamily="sans-serif-medium" />
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="4dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:tint="@color/red_700"
+                        android:src="@drawable/swipe_up_handle" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_large"
+                        android:text="@string/who_we_are_desc"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                        android:textColor="@color/grey_60"
+                        app:fontFamily="sans-serif-light" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>
