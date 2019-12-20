@@ -1,39 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/scrollLayout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/colorPrimaryDark">
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:fillViewport="true">
 
-    <LinearLayout
-        android:id="@+id/app_banner"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:orientation="vertical">
+        android:background="@color/colorPrimaryDark">
 
-        <ImageView
-            android:id="@+id/banner_img"
+        <LinearLayout
+            android:id="@+id/app_banner"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="30dp"
-            android:contentDescription="@string/app_background"
-            android:src="@drawable/app_dev"/>
-    </LinearLayout>
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/app_banner"
-        android:background="@drawable/bg_menu">
+            <ImageView
+                android:id="@+id/banner_img"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="20dp"
+                android:contentDescription="@string/app_background"
+                android:src="@drawable/app_dev"/>
+        </LinearLayout>
 
-        <androidx.core.widget.NestedScrollView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_below="@id/app_banner"
+            android:background="@drawable/bg_menu">
 
             <LinearLayout
                 android:id="@+id/features_list"
@@ -56,7 +58,7 @@
                     <com.titanium.tielements.views.MenuViews
                         android:id="@+id/statusbar_menu"
                         android:layout_width="match_parent"
-                        android:layout_height="120dp"
+                        android:layout_height="112dp"
                         android:layout_marginRight="10dp"
                         android:layout_marginLeft="10dp"
                         android:layout_weight="1"
@@ -69,7 +71,7 @@
                     <com.titanium.tielements.views.MenuViews
                         android:id="@+id/lockscreen_menu"
                         android:layout_width="match_parent"
-                        android:layout_height="120dp"
+                        android:layout_height="112dp"
                         android:layout_marginRight="10dp"
                         android:layout_marginLeft="10dp"
                         android:layout_weight="1"
@@ -82,7 +84,7 @@
                     <com.titanium.tielements.views.MenuViews
                         android:id="@+id/quick_settings_menu"
                         android:layout_width="match_parent"
-                        android:layout_height="120dp"
+                        android:layout_height="112dp"
                         android:layout_marginRight="10dp"
                         android:layout_marginLeft="10dp"
                         android:layout_weight="1"
@@ -97,7 +99,6 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingTop="24dp"
                     android:paddingRight="16dp"
                     android:paddingLeft="16dp"
                     android:paddingBottom="24dp"
@@ -108,7 +109,7 @@
                     <com.titanium.tielements.views.MenuViews
                         android:id="@+id/navbar_menu"
                         android:layout_width="match_parent"
-                        android:layout_height="120dp"
+                        android:layout_height="112dp"
                         android:layout_marginRight="10dp"
                         android:layout_marginLeft="10dp"
                         android:layout_weight="1"
@@ -121,7 +122,7 @@
                     <com.titanium.tielements.views.MenuViews
                         android:id="@+id/notifications_menu"
                         android:layout_width="match_parent"
-                        android:layout_height="120dp"
+                        android:layout_height="112dp"
                         android:layout_marginRight="10dp"
                         android:layout_marginLeft="10dp"
                         android:layout_weight="1"
@@ -134,7 +135,7 @@
                     <com.titanium.tielements.views.MenuViews
                         android:id="@+id/misc_menu"
                         android:layout_width="match_parent"
-                        android:layout_height="120dp"
+                        android:layout_height="112dp"
                         android:layout_marginRight="10dp"
                         android:layout_marginLeft="10dp"
                         android:layout_weight="1"
@@ -147,61 +148,59 @@
                 </LinearLayout>
 
                 <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingTop="24dp"
-                android:paddingRight="16dp"
-                android:paddingLeft="16dp"
-                android:paddingBottom="24dp"
-                android:weightSum="3"
-                android:baselineAligned="false"
-                android:orientation="horizontal">
-
-                <com.titanium.tielements.views.MenuViews
-                    android:id="@+id/animations_menu"
                     android:layout_width="match_parent"
-                    android:layout_height="120dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/bg_animations"
-                    android:clickable="true"
-                    app:icon="@drawable/ic_gestures"
-                    app:title="@string/menu_animations">
-                </com.titanium.tielements.views.MenuViews>
+                    android:layout_height="wrap_content"
+                    android:paddingRight="16dp"
+                    android:paddingLeft="16dp"
+                    android:paddingBottom="24dp"
+                    android:weightSum="3"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal">
 
-                <com.titanium.tielements.views.MenuViews
-                    android:id="@+id/buttons_menu"
-                    android:layout_width="match_parent"
-                    android:layout_height="120dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/bg_buttons"
-                    android:clickable="true"
-                    app:icon="@drawable/ic_power"
-                    app:title="@string/menu_buttons">
-                </com.titanium.tielements.views.MenuViews>
+                    <com.titanium.tielements.views.MenuViews
+                        android:id="@+id/animations_menu"
+                        android:layout_width="match_parent"
+                        android:layout_height="112dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_animations"
+                        android:clickable="true"
+                        app:icon="@drawable/ic_gestures"
+                        app:title="@string/menu_animations">
+                    </com.titanium.tielements.views.MenuViews>
 
-                <com.titanium.tielements.views.MenuViews
-                    android:id="@+id/about_menu"
-                    android:layout_width="match_parent"
-                    android:layout_height="120dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/bg_about"
-                    android:clickable="true"
-                    app:icon="@drawable/ic_about"
-                    app:title="@string/menu_about">
-                </com.titanium.tielements.views.MenuViews>
+                    <com.titanium.tielements.views.MenuViews
+                        android:id="@+id/buttons_menu"
+                        android:layout_width="match_parent"
+                        android:layout_height="112dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_buttons"
+                        android:clickable="true"
+                        app:icon="@drawable/ic_power"
+                        app:title="@string/menu_buttons">
+                    </com.titanium.tielements.views.MenuViews>
+
+                    <com.titanium.tielements.views.MenuViews
+                        android:id="@+id/about_menu"
+                        android:layout_width="match_parent"
+                        android:layout_height="112dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_about"
+                        android:clickable="true"
+                        app:icon="@drawable/ic_about"
+                        app:title="@string/menu_about">
+                    </com.titanium.tielements.views.MenuViews>
+
+                </LinearLayout>
 
             </LinearLayout>
 
-            </LinearLayout>
+        </LinearLayout>
 
-        </androidx.core.widget.NestedScrollView>
-
-    </LinearLayout>
-
-</RelativeLayout>
+    </RelativeLayout>
+</ScrollView>

@@ -42,7 +42,7 @@ public class Elements extends SettingsPreferenceFragment {
         mFragmentTransaction = mFragmentManager.beginTransaction();
         mFragmentTransaction.setCustomAnimations(R.anim.fade_in, R.anim.fade_out);
         mFragment = new ElementsFragment();
-        mFragmentTransaction.add(R.id.fragment_container, mFragment, Constants.MAIN_VIEW);
+        mFragmentTransaction.replace(R.id.fragment_container, mFragment, Constants.MAIN_VIEW);
         mFragmentTransaction.commit();
         return view;
     }
