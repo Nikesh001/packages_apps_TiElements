@@ -11,37 +11,51 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorPrimaryDark">
+        android:background="?android:attr/colorBackground">
 
         <LinearLayout
             android:id="@+id/app_banner"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:orientation="vertical"
             android:layout_alignParentTop="true">
 
             <ImageView
                 android:id="@+id/banner_img"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="60dp"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginEnd="8dp"
-                android:layout_marginBottom="20dp"
                 android:contentDescription="@string/app_background"
-                android:src="@drawable/app_dev"/>
+                android:src="@drawable/ic_titanium_logo"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_large"
+                android:gravity="center"
+                android:text="@string/tielements_title"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="?android:attr/textColorPrimary"
+                app:fontFamily="sans-serif-medium" />
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="4dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:tint="@color/red_700"
+                android:src="@drawable/swipe_up_handle" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@id/app_banner"
-            android:background="@drawable/bg_menu">
+            android:layout_below="@id/app_banner">
 
             <LinearLayout
                 android:id="@+id/features_list"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/bg_menu"
                 android:orientation="vertical">
 
                 <LinearLayout
@@ -143,6 +157,57 @@
                         android:clickable="true"
                         app:icon="@drawable/ic_misc"
                         app:title="@string/menu_misc">
+                    </com.titanium.tielements.views.MenuViews>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="16dp"
+                    android:paddingLeft="16dp"
+                    android:paddingBottom="24dp"
+                    android:weightSum="3"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal">
+
+                    <com.titanium.tielements.views.MenuViews
+                        android:id="@+id/ambient_menu"
+                        android:layout_width="match_parent"
+                        android:layout_height="112dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_ambient"
+                        android:clickable="true"
+                        app:icon="@drawable/ic_ambient"
+                        app:title="@string/menu_ambient">
+                    </com.titanium.tielements.views.MenuViews>
+
+                    <com.titanium.tielements.views.MenuViews
+                        android:id="@+id/battery_menu"
+                        android:layout_width="match_parent"
+                        android:layout_height="112dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_battery"
+                        android:clickable="true"
+                        app:icon="@drawable/ic_battery"
+                        app:title="@string/menu_battery">
+                    </com.titanium.tielements.views.MenuViews>
+
+                    <com.titanium.tielements.views.MenuViews
+                        android:id="@+id/screen_menu"
+                        android:layout_width="match_parent"
+                        android:layout_height="112dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_screen"
+                        android:clickable="true"
+                        app:icon="@drawable/ic_screen"
+                        app:title="@string/menu_screen">
                     </com.titanium.tielements.views.MenuViews>
 
                 </LinearLayout>

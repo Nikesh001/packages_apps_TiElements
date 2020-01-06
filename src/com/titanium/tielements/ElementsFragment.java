@@ -30,12 +30,15 @@ import com.android.settings.SettingsPreferenceFragment;
 import com.android.internal.logging.nano.MetricsProto;
 
 import com.titanium.tielements.fragments.About;
+import com.titanium.tielements.fragments.Ambient;
 import com.titanium.tielements.fragments.Animations;
+import com.titanium.tielements.fragments.Battery;
 import com.titanium.tielements.fragments.Buttons;
 import com.titanium.tielements.fragments.Lockscreen;
 import com.titanium.tielements.fragments.Navigation;
 import com.titanium.tielements.fragments.Notifications;
 import com.titanium.tielements.fragments.QuickSettings;
+import com.titanium.tielements.fragments.Screen;
 import com.titanium.tielements.fragments.Statusbar;
 import com.titanium.tielements.fragments.Misc;
 import com.titanium.tielements.views.MenuViews;
@@ -44,7 +47,7 @@ public class ElementsFragment extends SettingsPreferenceFragment implements View
 
     private static final String TAG = "TiElements";
 
-    private MenuViews statusbar, navbar, qs, misc, lockscreen, notications, buttons, about, animations;
+    private MenuViews statusbar, navbar, qs, misc, lockscreen, notications, buttons, about, animations, ambient, battery, screen;
     private FragmentManager mFragmentManager;
     private FragmentTransaction mFragmentTransaction;
     private Fragment mFragment;
@@ -53,6 +56,7 @@ public class ElementsFragment extends SettingsPreferenceFragment implements View
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.elements_fragment, container, false);
         mFragmentManager = getActivity().getSupportFragmentManager();
+        getActivity().setTitle(R.string.tielements_title);
         initViews(view);
         return view;
     }
@@ -61,7 +65,6 @@ public class ElementsFragment extends SettingsPreferenceFragment implements View
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setRetainInstance(true);
-        getActivity().setTitle(R.string.tielements_title);
     }
 
     @Override
@@ -78,6 +81,9 @@ public class ElementsFragment extends SettingsPreferenceFragment implements View
         notications = (MenuViews) view.findViewById(R.id.notifications_menu);
         lockscreen = (MenuViews) view.findViewById(R.id.lockscreen_menu);
         misc = (MenuViews) view.findViewById(R.id.misc_menu);
+        ambient = (MenuViews) view.findViewById(R.id.ambient_menu);
+        battery = (MenuViews) view.findViewById(R.id.battery_menu);
+        screen = (MenuViews) view.findViewById(R.id.screen_menu);
         animations = (MenuViews) view.findViewById(R.id.animations_menu);
         buttons = (MenuViews) view.findViewById(R.id.buttons_menu);
         about = (MenuViews) view.findViewById(R.id.about_menu);
@@ -92,6 +98,9 @@ public class ElementsFragment extends SettingsPreferenceFragment implements View
         notications.setOnClickListener(this);
         lockscreen.setOnClickListener(this);
         misc.setOnClickListener(this);
+        ambient.setOnClickListener(this);
+        battery.setOnClickListener(this);
+        screen.setOnClickListener(this);
         animations.setOnClickListener(this);
         buttons.setOnClickListener(this);
         about.setOnClickListener(this);
@@ -135,16 +144,25 @@ public class ElementsFragment extends SettingsPreferenceFragment implements View
                 loadFragment(Constants.LOCK_SCREEN_MENU_FRAGMENT,true,null,new Lockscreen());
                 break;
             case  R.id.misc_menu:
-                loadFragment(Constants.SYSTEM_MENU_FRAGMENT,true,null,new Misc());
+                loadFragment(Constants.MISC_MENU_FRAGMENT,true,null,new Misc());
+                break;
+            case  R.id.ambient_menu:
+                loadFragment(Constants.AMBIENT_MENU_FRAGMENT,true,null,new Ambient());
+                break;
+            case  R.id.battery_menu:
+                loadFragment(Constants.BATTERY_MENU_FRAGMENT,true,null,new Battery());
+                break;
+            case  R.id.screen_menu:
+                loadFragment(Constants.SCREEN_MENU_FRAGMENT,true,null,new Screen());
                 break;
             case  R.id.animations_menu:
-                loadFragment(Constants.SYSTEM_MENU_FRAGMENT,true,null,new Animations());
+                loadFragment(Constants.ANIMATION_MENU_FRAGMENT,true,null,new Animations());
                 break;
             case  R.id.buttons_menu:
-                loadFragment(Constants.SYSTEM_MENU_FRAGMENT,true,null,new Buttons());
+            loadFragment(Constants.BUTTONS_MENU_FRAGMENT,true,null,new Buttons());
                 break;
             case  R.id.about_menu:
-                loadFragment(Constants.SYSTEM_MENU_FRAGMENT,true,null,new About());
+                loadFragment(Constants.ABOUT_MENU_FRAGMENT,true,null,new About());
                 break;
 
         }

@@ -26,12 +26,12 @@
                 android:layout_height="wrap_content"
                 app:cardCornerRadius="2dp"
                 app:cardElevation="2dp"
+                android:background="?android:attr/colorBackground"
                 app:cardUseCompatPadding="true">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@color/white_background"
                     android:orientation="vertical"
                     android:paddingBottom="@dimen/spacing_xlarge">
 
@@ -42,7 +42,7 @@
                         android:gravity="center"
                         android:text="Our Team"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                        android:textColor="@color/grey_90"
+                        android:textColor="?android:attr/textColorPrimary"
                         app:fontFamily="sans-serif-medium" />
 
                     <ImageView
@@ -85,15 +85,15 @@
                                 android:layout_marginTop="@dimen/spacing_medium"
                                 android:text="Saikat"
                                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
-                                android:textColor="@color/grey_90"
+                                android:textColor="?android:attr/textColorPrimary"
                                 app:fontFamily="sans-serif-medium" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Founder/Lead Dev"
+                                android:text="Founder &#38; Lead Dev"
                                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
-                                android:textColor="@color/grey_60"
+                                android:textColor="?android:attr/textColorPrimary"
                                 app:fontFamily="sans-serif-light" />
 
                         </LinearLayout>
@@ -121,15 +121,15 @@
                                 android:layout_marginTop="@dimen/spacing_medium"
                                 android:text="Nikesh"
                                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
-                                android:textColor="@color/grey_90"
+                                android:textColor="?android:attr/textColorPrimary"
                                 app:fontFamily="sans-serif-medium" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Core Dev"
+                                android:text="Lead Dev"
                                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
-                                android:textColor="@color/grey_60"
+                                android:textColor="?android:attr/textColorPrimary"
                                 app:fontFamily="sans-serif-light" />
 
                         </LinearLayout>
@@ -157,15 +157,15 @@
                                 android:layout_marginTop="@dimen/spacing_medium"
                                 android:text="Abhiraj"
                                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
-                                android:textColor="@color/grey_90"
+                                android:textColor="?android:attr/textColorPrimary"
                                 app:fontFamily="sans-serif-medium" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Core Dev"
+                                android:text="Moderator &#38; Dev"
                                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
-                                android:textColor="@color/grey_60"
+                                android:textColor="?android:attr/textColorPrimary"
                                 app:fontFamily="sans-serif-light" />
 
                         </LinearLayout>
@@ -204,15 +204,15 @@
                                 android:layout_marginTop="@dimen/spacing_medium"
                                 android:text="Sonal"
                                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
-                                android:textColor="@color/grey_90"
+                                android:textColor="?android:attr/textColorPrimary"
                                 app:fontFamily="sans-serif-medium" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Core Dev"
+                                android:text="Lead Dev"
                                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
-                                android:textColor="@color/grey_60"
+                                android:textColor="?android:attr/textColorPrimary"
                                 app:fontFamily="sans-serif-light" />
 
                         </LinearLayout>
@@ -240,7 +240,7 @@
                                 android:layout_marginTop="@dimen/spacing_medium"
                                 android:text="Roger"
                                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
-                                android:textColor="@color/grey_90"
+                                android:textColor="?android:attr/textColorPrimary"
                                 app:fontFamily="sans-serif-medium" />
 
                             <TextView
@@ -248,7 +248,7 @@
                                 android:layout_height="wrap_content"
                                 android:text="UI/UX Developer"
                                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
-                                android:textColor="@color/grey_60"
+                                android:textColor="?android:attr/textColorPrimary"
                                 app:fontFamily="sans-serif-light" />
 
                         </LinearLayout>
@@ -276,7 +276,7 @@
                                 android:layout_marginTop="@dimen/spacing_medium"
                                 android:text="Vivek"
                                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
-                                android:textColor="@color/grey_90"
+                                android:textColor="?android:attr/textColorPrimary"
                                 app:fontFamily="sans-serif-medium" />
 
                             <TextView
@@ -284,7 +284,7 @@
                                 android:layout_height="wrap_content"
                                 android:text="UI/UX Developer"
                                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
-                                android:textColor="@color/grey_60"
+                                android:textColor="?android:attr/textColorPrimary"
                                 app:fontFamily="sans-serif-light" />
 
                         </LinearLayout>
@@ -303,7 +303,7 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/white_background"
+                android:background="?android:attr/colorBackground"
                 app:cardCornerRadius="2dp"
                 app:cardElevation="2dp"
                 app:cardUseCompatPadding="true">
@@ -311,7 +311,6 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@color/white_background"
                     android:orientation="vertical"
                     android:paddingBottom="@dimen/spacing_large"
                     android:paddingLeft="@dimen/spacing_mlarge"
@@ -324,7 +323,7 @@
                         android:gravity="center"
                         android:text="Who We Are"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                        android:textColor="@color/grey_90"
+                        android:textColor="?android:attr/textColorPrimary"
                         app:fontFamily="sans-serif-medium" />
 
                     <ImageView
@@ -341,7 +340,7 @@
                         android:layout_marginTop="@dimen/spacing_large"
                         android:text="@string/who_we_are_desc"
                         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                        android:textColor="@color/grey_60"
+                        android:textColor="?android:attr/textColorPrimary"
                         app:fontFamily="sans-serif-light" />
 
                 </LinearLayout>
