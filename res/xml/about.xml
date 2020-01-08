@@ -2,8 +2,19 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:title="@string/menu_about">
-    
     <Preference
         android:layout="@layout/about_us"/>
+
+    <PreferenceCategory
+        android:key="maintainers"
+        android:title="@string/maintainers" >
+
+        <Preference
+            android:key="maintainers_fragment"
+            android:title="@string/maintainers_title"
+            android:summary="@string/maintainers_summary"
+            android:fragment="com.titanium.tielements.fragments.Maintainers" />
+
+    </PreferenceCategory>
 
 </PreferenceScreen>

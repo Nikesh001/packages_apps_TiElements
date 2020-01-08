@@ -37,7 +37,16 @@
     <string name="who_we_are_desc">
         TitaniumOS is a Custom ROM based on Google Android Open Source Project.This ROM developed with a major focus on system stability and useful features. All this without compromising on the pure Android experience.
     </string>
-    <string name="go_back">Go Back</string>
+    <string name="maintainers">Maintainers</string>
+    <string name="maintainers_title">Official Maintainers</string>
+    <string name="maintainers_summary">Officially supported Devices and Maintainers.</string>
+
+    <!-- Maintainer section -->
+    <string name="maintainer_description">Maintainer: %1$s</string>
+    <string name="loading_devices">Loading devices list...</string>
+    <string name="loading_devices_failed">Failed to load devices list</string>
+    <string name="devices_list_empty">List is empty, tap the icon to reload</string>
+    <string name="reload_list">Reload</string>
 
     <string name="tielements_title">TiElements</string>
     <string name="tielements_summary_title">It is Titanium Time</string>
