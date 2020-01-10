@@ -40,6 +40,12 @@
     <string name="maintainers">Maintainers</string>
     <string name="maintainers_title">Official Maintainers</string>
     <string name="maintainers_summary">Officially supported Devices and Maintainers.</string>
+    <string name="github">Github</string>
+    <string name="github_description">View our source code</string>
+    <string name="telegram">Telegram</string>
+    <string name="telegram_description">Subscribe to our Telegram channel</string>
+    <string name="paypal">Paypal</string>
+    <string name="paypal_description">Support us to add more elements</string>
 
     <!-- Maintainer section -->
     <string name="maintainer_description">Maintainer: %1$s</string>
