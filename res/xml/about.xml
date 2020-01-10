@@ -5,16 +5,33 @@
     <Preference
         android:layout="@layout/about_us"/>
 
-    <PreferenceCategory
-        android:key="maintainers"
-        android:title="@string/maintainers" >
+    <Preference
+        android:key="maintainers_fragment"
+        android:layout="@layout/maintainer_card"
+        android:fragment="com.titanium.tielements.fragments.Maintainers" />
 
-        <Preference
-            android:key="maintainers_fragment"
-            android:title="@string/maintainers_title"
-            android:summary="@string/maintainers_summary"
-            android:fragment="com.titanium.tielements.fragments.Maintainers" />
+    <Preference
+        android:key="github_fragment"
+        android:layout="@layout/github_card">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="http://github.com/Titanium-OS" />
+    </Preference>
 
-    </PreferenceCategory>
+    <Preference
+        android:key="telegram_fragment"
+        android:layout="@layout/telegram_card">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="https://t.me/TitaniumOS_Chat" />
+    </Preference>
+
+    <Preference
+        android:key="paypal_fragment"
+        android:layout="@layout/paypal_card">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="https://paypal.me/iamsaikat" />
+    </Preference>
 
 </PreferenceScreen>
