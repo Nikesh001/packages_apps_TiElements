@@ -36,8 +36,22 @@ import com.android.settings.Utils;
 
 public class Statusbar extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
-    
+
     private static final String TAG = "Statusbar";
+
+    private static final String SHOW_BATTERY_PERCENT = "show_battery_percent";
+    private static final String KEY_BATTERY_PERCENTAGE = "battery_percentage";
+    private static final String BATTERY_PERCENTAGE_HIDDEN = "0";
+    private static final String STATUS_BAR_BATTERY_STYLE = "status_bar_battery_style";
+
+    private static final int BATTERY_STYLE_Q = 0;
+    private static final int BATTERY_STYLE_DOTTED_CIRCLE = 1;
+    private static final int BATTERY_STYLE_CIRCLE = 2;
+    private static final int BATTERY_STYLE_TEXT = 3;
+    private static final int BATTERY_STYLE_HIDDEN = 4;
+
+    private ListPreference mBatteryPercent;
+    private ListPreference mBatteryStyle;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -47,6 +61,21 @@ public class Statusbar extends SettingsPreferenceFragment implements
         setRetainInstance(true);
 
         ContentResolver resolver = getActivity().getContentResolver();
+
+        mBatteryPercent = (ListPreference) findPreference(KEY_BATTERY_PERCENTAGE);
+        int percentstyle = Settings.System.getInt(resolver,
+                Settings.System.SHOW_BATTERY_PERCENT, 0);
+        mBatteryPercent.setValue(String.valueOf(percentstyle));
+        mBatteryPercent.setSummary(mBatteryPercent.getEntry());
+        mBatteryPercent.setOnPreferenceChangeListener(this);
+
+        mBatteryStyle = (ListPreference) findPreference(STATUS_BAR_BATTERY_STYLE);
+        int batterystyle = Settings.Secure.getIntForUser(resolver,
+                Settings.Secure.STATUS_BAR_BATTERY_STYLE, BATTERY_STYLE_Q,
+                UserHandle.USER_CURRENT);
+        mBatteryStyle.setOnPreferenceChangeListener(this);
+
+        updateBatteryOptions(batterystyle);
     }
 
     @Override
@@ -66,7 +95,26 @@ public class Statusbar extends SettingsPreferenceFragment implements
 
     public boolean onPreferenceChange(Preference preference, Object objValue) {
         final String key = preference.getKey();
+        if (preference == mBatteryPercent) {
+            int value = Integer.parseInt((String) objValue);
+            int index = mBatteryPercent.findIndexOfValue((String) objValue);
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.SHOW_BATTERY_PERCENT, value);
+            mBatteryPercent.setSummary(mBatteryPercent.getEntries()[index]);
+            return true;
+        } else if (preference == mBatteryStyle) {
+            int value = Integer.parseInt((String) objValue);
+            updateBatteryOptions(value);
+            return true;
+        }
         return true;
     }
 
+    private void updateBatteryOptions(int batterystyle) {
+        if (batterystyle == BATTERY_STYLE_HIDDEN) {
+           mBatteryPercent.setValue(BATTERY_PERCENTAGE_HIDDEN);
+           mBatteryPercent.setSummary(mBatteryPercent.getEntry());
+        }
+        mBatteryPercent.setEnabled(batterystyle != BATTERY_STYLE_TEXT && batterystyle != BATTERY_STYLE_HIDDEN);
+    }
 }
