@@ -20,4 +20,10 @@
     android:title="@string/menu_misc"
     xmlns:settings="http://schemas.android.com/apk/res-auto">
 
+        <com.titanium.support.preferences.SystemSettingSwitchPreference
+            android:key="three_finger_gesture"
+            android:title="@string/three_finger_gesture"
+            android:summary="@string/three_finger_gesture_summary"
+            android:defaultValue="false" />
+
 </PreferenceScreen>
