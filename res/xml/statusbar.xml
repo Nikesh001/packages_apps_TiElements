@@ -3,6 +3,18 @@
     android:title="@string/menu_status_bar"
     xmlns:settings="http://schemas.android.com/apk/res-auto">
 
+    <PreferenceCategory
+        android:key="statusbar_gestures"
+        android:title="@string/gestures_title">
+
+        <com.titanium.support.preferences.SystemSettingSwitchPreference
+            android:key="double_tap_sleep_gesture"
+            android:title="@string/double_tap_sleep_gesture_title"
+            android:summary="@string/double_tap_sleep_gesture_summary"
+            android:defaultValue="false" />
+
+    </PreferenceCategory>
+
     <com.titanium.support.preferences.SystemSettingSwitchPreference
          android:key="bluetooth_show_battery"
          android:title="@string/bluetooth_battery_title"
